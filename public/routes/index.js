@@ -1,7 +1,7 @@
 const express = require('express');
-const path = require('path');
 const router = express.Router();
 
+const booksRoute = require('./books');
 
 module.exports = () => {
 	router.get('/', (req, res) => {
@@ -10,5 +10,7 @@ module.exports = () => {
 	router.get('/info', (req, res) => {
 		res.render('pages/info', { pageTitle: 'Info' });
 	});
+
+	router.use('/books', booksRoute());
 	return router;
 }
