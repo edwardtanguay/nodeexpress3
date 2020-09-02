@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const rfr = require('rfr');
 
+//const flashcardsRoute = rfr('public/routes/flashcards'); // doesn't work in VSCode
 const flashcardsRoute = require('./flashcards');
 
 module.exports = () => {
