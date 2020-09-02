@@ -9,10 +9,14 @@ module.exports = () => {
 		const itemTypeFlashcards = new ItemTypeFlashcards();
 		itemTypeFlashcards.getData(['items', 'capitalizedCategories', 'ids', 'pageTitle', 'randomItem'])
 			.then(data => res.render('pages/flashcards', { data: data }));
-
 	});
 	router.get('/:id', (req, res) => {
-		return res.send(`detail page of flashcard "${req.params.id}"`);
+		const itemTypeFlashcards = new ItemTypeFlashcards();
+		itemTypeFlashcards.getData(['pageTitle', `getItem(${req.params.id})`])
+			.then(data => {
+				data.pageTitle = 'Flashcard ';
+				res.render('pages/flashcard', { data: data });
+			});
 	});
 	return router;
 }

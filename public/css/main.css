@@ -1,7 +1,19 @@
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif; }
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 0.5em 1em; }
   body h1 {
     font-size: 1.2em;
     font-weight: normal; }
   body p {
     color: #555; }
+  body a:link,
+  body a:visited,
+  body a:active {
+    color: #555; }
+  body code {
+    background-color: #eee;
+    font-size: 1.2em;
+    color: brown;
+    font-family: 'Courier New', Courier, monospace; }
+  body .flashcard .category {
+    background-color: #eee; }

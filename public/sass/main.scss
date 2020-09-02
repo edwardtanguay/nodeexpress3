@@ -1,5 +1,6 @@
 body {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	padding: 0.5em 1em;
 
 	h1 {
 		font-size: 1.2em;
@@ -8,5 +9,24 @@ body {
 
 	p {
 		color: #555;
+	}
+
+	a:link,
+	a:visited,
+	a:active {
+		color: #555;
+	}
+
+	code {
+		background-color: #eee;
+		font-size: 1.2em;
+		color: brown;
+		font-family: 'Courier New', Courier, monospace;
+	}
+
+	.flashcard {
+		.category {
+			background-color: #eee;
+		}
 	}
 }

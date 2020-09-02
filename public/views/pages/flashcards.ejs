@@ -26,7 +26,8 @@
 
 	<ul>
 		<% data.items.forEach(item => {%>
-		<li><%=item.front%></li>
+		<li class="flashcard"><span class="category"><%=item.category%></span>: <a
+				href="flashcards/<%=item.id%>"><%=item.front%></a></li>
 		<% });%>
 	</ul>
 </body>
