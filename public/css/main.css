@@ -1,8 +1,7 @@
-h1 {
-	font-size: 1.3em;
-	font-weight: normal;
-}
-
-p {
-	color: #555;
-}
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; }
+  body h1 {
+    font-size: 1.2em;
+    font-weight: normal; }
+  body p {
+    color: #555; }
