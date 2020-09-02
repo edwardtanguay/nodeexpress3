@@ -3,7 +3,7 @@ const router = express.Router();
 
 module.exports = () => {
 	router.get('/', (req, res) => {
-		return res.send('this will be the flashcard page');
+		res.render('pages/flashcards', { pageTitle: 'Flashcards' });
 	});
 	router.get('/:id', (req, res) => {
 		return res.send(`detail page of flashcard "${req.params.id}"`);
