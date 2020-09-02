@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const booksRoute = require('./books');
+const flashcardsRoute = require('./flashcards');
 
 module.exports = () => {
 	router.get('/', (req, res) => {
@@ -11,6 +11,6 @@ module.exports = () => {
 		res.render('pages/info', { pageTitle: 'Info' });
 	});
 
-	router.use('/books', booksRoute());
+	router.use('/flashcards', flashcardsRoute());
 	return router;
 }
