@@ -3,14 +3,25 @@
 
 <head>
 	<meta charset="utf-8">
-	<title><%=pageTitle%></title>
+	<title><%=data.pageTitle%></title>
 	<link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-	<h1><%=pageTitle%></h1>
+	<h1><%=data.pageTitle%></h1>
+
+	<div>
+		<%=data.ids.join(',') %>
+	</div>
+	<div>
+		<%=data.capitalizedCategories.join(',') %>
+	</div>
+
+
+
 	<ul>
-		<% items.forEach(item => {%>
+
+		<% data.items.forEach(item => {%>
 		<li><%=item.front%></li>
 		<% });%>
 	</ul>

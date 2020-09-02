@@ -1,20 +1,23 @@
-const fs = require("fs");
-const { promisify } = require("util");
+const path = require('path');
+const ItemTypes = require('./ItemTypes');
 
-const path = require("path");
-
-const readFile = promisify(fs.readFile);
-
-class ItemTypeFlashcards {
+class ItemTypeFlashcards extends ItemTypes {
 
 	constructor() {
+		super();
+
 		this.datafile = path.join(__dirname, '../data/flashcards.json');
 	}
 
-	async getItems() {
-		const items = await readFile(this.datafile, "utf8");
-		return JSON.parse(items);
+	async getPageTitle() {
+		return 'The Flashcards';
 	}
+
+	async getCapitalizedCategories() {
+		const items = await this.getItems();
+		return items.map(m => m.category.toUpperCase());
+	}
+
 }
 
 module.exports = ItemTypeFlashcards;
