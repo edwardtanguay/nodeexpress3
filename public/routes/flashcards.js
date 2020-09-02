@@ -7,7 +7,7 @@ const ItemTypeFlashcards = require('../itemTypes/itemTypeFlashcards.js');
 module.exports = () => {
 	router.get('/', (req, res) => {
 		const itemTypeFlashcards = new ItemTypeFlashcards();
-		itemTypeFlashcards.getData(['items', 'capitalizedCategories', 'ids', 'pageTitle'])
+		itemTypeFlashcards.getData(['items', 'capitalizedCategories', 'ids', 'pageTitle', 'randomItem'])
 			.then(data => res.render('pages/flashcards', { data: data }));
 
 	});

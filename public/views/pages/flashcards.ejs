@@ -10,17 +10,21 @@
 <body>
 	<h1><%=data.pageTitle%></h1>
 
+	<hr />
 	<div>
 		<%=data.ids.join(',') %>
 	</div>
 	<div>
 		<%=data.capitalizedCategories.join(',') %>
 	</div>
+	<hr />
 
+	<div>
+		Random flashcard: <%=data.randomItem.id%> (<%=data.randomItem.category%>)
+	</div>
 
 
 	<ul>
-
 		<% data.items.forEach(item => {%>
 		<li><%=item.front%></li>
 		<% });%>

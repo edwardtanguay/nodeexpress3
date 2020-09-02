@@ -21,7 +21,6 @@ class ItemTypes {
 	async getData(idCodes) {
 		const data = {};
 		for (const idCode of idCodes) {
-			console.log(idCode);
 			const methodName = this.getMethodNameFromIdCode(idCode);
 			data[idCode] = await this[methodName]();
 		}
@@ -31,6 +30,12 @@ class ItemTypes {
 	async getIds() {
 		const items = await this.getItems();
 		return items.map(item => item.id);
+	}
+
+	async getRandomItem() {
+		const items = await this.getItems();
+		const randomIndex = Math.floor(Math.random() * items.length);
+		return items[randomIndex];
 	}
 }
 

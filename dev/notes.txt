@@ -1,2 +1,12 @@
 TODO
 - add qtools, and at in ItemTypeFlashcards
+
+- make data section in .esj page
+	- make global, e.g. 
+		----------------------------
+		currentUser
+		bestFlashcards = flashcards.getBest(10)
+		newArticles = articles.getNewest(10)
+		quote = quote.getRandom()
+		----------------------------
+- prevent multiple loading of this.getItems()
