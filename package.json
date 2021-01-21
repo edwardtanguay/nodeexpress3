@@ -4,12 +4,14 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "node_modules/.bin/nodemon server.js"
+		"startapp": "node_modules/.bin/nodemon server.js",
+		"start": "concurrently \"gulp\" \"npm run startapp\""
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
+		"concurrently": "^5.3.0",
 		"ejs": "^3.1.5",
 		"express": "^4.17.1",
 		"rfr": "^1.2.3"
