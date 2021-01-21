@@ -1,8 +1,7 @@
 const express = require('express');
-const router = express.Router();
-const rfr = require('rfr');
-
 const flashcardsRoute = require('./flashcards');
+
+const router = express.Router();
 
 module.exports = (config) => {
 	router.get('/', (req, res) => {
