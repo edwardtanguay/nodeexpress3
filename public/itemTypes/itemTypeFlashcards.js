@@ -10,7 +10,7 @@ class ItemTypeFlashcards extends ItemTypes {
 	}
 
 	async getPageTitle() {
-		return 'The Flashcards';
+		return 'Flashcards';
 	}
 
 	async getCapitalizedCategories() {

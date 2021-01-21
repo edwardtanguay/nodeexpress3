@@ -1,44 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
+<h1>
+	<%=data.pageTitle%>
+</h1>
+<hr />
+<div>
+	Number of flashcards: <span class="totalNumber">
+		<%=data.items.length %>
+	</span>
+</div>
+<hr />
+<div>
+	You have visited this page <b>
+		<%=visitCount%>
+	</b> times.
+</div>
+<hr />
+<div>
+	<%=data.ids.join(',') %>
+</div>
+<div>
+	<%=data.capitalizedCategories.join(',') %>
+</div>
+<hr />
 
-<head>
-	<meta charset="utf-8">
-	<title><%=data.pageTitle%></title>
-	<link rel="stylesheet" href="css/main.css">
-</head>
-
-<body>
-	<h1><%=data.pageTitle%></h1>
-	<p>Go back to <a href="/">main page</a>.</p>
-
-	<hr />
-	<div>
-		Number of flashcards: <span class="totalNumber"><%=data.items.length %></span>
-	</div>
-	<hr />
-	<div>
-		You have visited this page <b><%=visitCount%></b> times.
-	</div>
-	<hr />
-	<div>
-		<%=data.ids.join(',') %>
-	</div>
-	<div>
-		<%=data.capitalizedCategories.join(',') %>
-	</div>
-	<hr />
-
-	<div>
-		Random flashcard: <%=data.randomItem.id%> (<%=data.randomItem.category%>)
-	</div>
+<div>
+	Random flashcard: <%=data.randomItem.id%> (<%=data.randomItem.category%>)
+</div>
 
 
-	<ul>
-		<% data.items.forEach(item => {%>
-		<li class="flashcard"><span class="category"><%=item.category%></span>: <a
-				href="flashcards/<%=item.id%>"><%=item.front%></a></li>
+<ul>
+	<% data.items.forEach(item=> {%>
+		<li class="flashcard"><span class="category">
+				<%=item.category%>
+			</span>: <a href="flashcards/<%=item.id%>">
+				<%=item.front%>
+			</a></li>
 		<% });%>
-	</ul>
-</body>
-
-</html>
+</ul>

@@ -8,9 +8,9 @@ module.exports = config => {
 		res.render('layout/main', { pageTitle: config.appTitle, pageIdCode: "index" });
 	});
 	router.get('/info', (req, res) => {
-		res.render('layout/main', { pageTitle: 'Info', htmlText: 'this is <b>bold</b> text', pageIdCode: "info" });
+		res.render('layout/main', { pageTitle: config.appTitle, htmlText: 'this is <b>bold</b> text', pageIdCode: "info" });
 	});
 
-	router.use('/flashcards', flashcardsRoute());
+	router.use('/flashcards', flashcardsRoute(config));
 	return router;
 }
