@@ -19,7 +19,7 @@ module.exports = config => {
 		itemTypeFlashcards.getData(['pageTitle', `getItem(${req.params.id})`])
 			.then(data => {
 				data.pageTitle = 'Flashcard ';
-				res.render('pages/flashcard', { data });
+				res.render('layout/main', { pageTitle: config.appTitle, data, pageIdCode: "flashcard" });
 			});
 	});
 	return router;

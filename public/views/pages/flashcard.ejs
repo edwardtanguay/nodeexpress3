@@ -1,25 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+<h1>
+	<%=data.pageTitle%>
+</h1>
 
-<head>
-	<meta charset="utf-8">
-	<title><%=data.pageTitle%></title>
-	<link rel="stylesheet" href="../css/main.css">
-</head>
+<hr>
+Menu: <a href="../flashcards">Flashcards</a>
+<hr>
 
-<body>
-	<h1><%=data.pageTitle%></h1>
-
-	<hr>
-	Menu: <a href="../flashcards">Flashcards</a>
-	<hr>
-
-	<div>
-		<%=data.item.front%>
-	</div>
-	<div>
-		<code><%=data.item.back%></code>
-	</div>
-</body>
-
-</hr>
+<div>
+	<%=data.item.front%>
+</div>
+<div>
+	<code>
+		<%=data.item.back%>
+	</code>
+</div>

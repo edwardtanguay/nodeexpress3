@@ -3,15 +3,24 @@
 
 <head>
 	<meta charset="utf-8">
-	<title><%=pageTitle%></title>
-	<link rel="stylesheet" href="./css/main.css">
+	<title>
+		<%=pageTitle%>
+	</title>
+	<% if(pageIdCode === 'flashcard'){ %>
+		<link rel="stylesheet" href="../css/main.css">
+	<% } else{ %>  
+		<link rel="stylesheet" href="./css/main.css">
+	<% } %>
 </head>
 
 <body>
-	<h1><%=pageTitle%></h1>
-	Menu: <a href="/">home</a> | <a href="info">info</a> | <a href="flashcards">flashcards</a>
+	<h1>
+		<%=pageTitle%>
+	</h1>
+	Menu: <a href="/">home</a> | <a href="/info">info</a> | <a href="/flashcards">flashcards</a>
 	<div class="content">
-		<%- include(`../pages/${pageIdCode}`) %>
+		<%- include(`../pages/${pageIdCode}`)
+			%>
 	</div>
 </body>
 
