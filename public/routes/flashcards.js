@@ -1,4 +1,3 @@
-const { request } = require('express');
 const express = require('express');
 const ItemTypeFlashcards = require('../itemTypes/itemTypeFlashcards.js');
 
