@@ -1,7 +1,7 @@
 const express = require('express');
+const ItemTypeFlashcards = require('../itemTypes/itemTypeFlashcards.js');
 
 const router = express.Router();
-const ItemTypeFlashcards = require('../itemTypes/itemTypeFlashcards.js');
 
 module.exports = () => {
 	router.get('/', (req, res) => {
