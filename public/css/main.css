@@ -17,3 +17,6 @@ body {
     font-family: 'Courier New', Courier, monospace; }
   body .flashcard .category {
     background-color: #eee; }
+  body .totalNumber {
+    color: brown;
+    font-weight: bold; }

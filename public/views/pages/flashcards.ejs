@@ -9,7 +9,12 @@
 
 <body>
 	<h1><%=data.pageTitle%></h1>
+	<p>Go back to <a href="/">main page</a>.</p>
 
+	<hr />
+	<div>
+		Number of flashcards: <span class="totalNumber"><%=data.items.length %></span>
+	</div>
 	<hr />
 	<div>
 		<%=data.ids.join(',') %>
