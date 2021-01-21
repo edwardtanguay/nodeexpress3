@@ -2,12 +2,11 @@ const express = require('express');
 const router = express.Router();
 const rfr = require('rfr');
 
-//const flashcardsRoute = rfr('public/routes/flashcards'); // doesn't work in VSCode
 const flashcardsRoute = require('./flashcards');
 
-module.exports = () => {
+module.exports = (config) => {
 	router.get('/', (req, res) => {
-		res.render('pages/index', { pageTitle: 'The Main Page' });
+		res.render('pages/index', { pageTitle: config.appTitle });
 	});
 	router.get('/info', (req, res) => {
 		res.render('pages/info', { pageTitle: 'Info' });

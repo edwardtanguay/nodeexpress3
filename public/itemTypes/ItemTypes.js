@@ -18,7 +18,6 @@ class ItemTypes {
 		if (!idCode.includes('(')) {
 			return ['get' + idCode.charAt(0).toUpperCase() + idCode.slice(1), idCode, []]
 		} else {
-			// TODO: refactor to make more flexible
 			var regExp = /\(([^)]+)\)/;
 			var matches = regExp.exec(idCode);
 			const strNum = matches[1];
