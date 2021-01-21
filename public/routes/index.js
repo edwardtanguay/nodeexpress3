@@ -9,7 +9,7 @@ module.exports = (config) => {
 		res.render('pages/index', { pageTitle: config.appTitle });
 	});
 	router.get('/info', (req, res) => {
-		res.render('pages/info', { pageTitle: 'Info' });
+		res.render('pages/info', { pageTitle: 'Info', htmlText: 'this is <b>bold</b> text' });
 	});
 
 	router.use('/flashcards', flashcardsRoute());
