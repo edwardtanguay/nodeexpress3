@@ -23,6 +23,27 @@ app.use(
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, './public/views'));
 
+app.use((req, res, next) => {
+	res.locals.timeOfPageLoad = new Date().toISOString();
+	return next();
+});
+app.locals.appVersion = "0.23.45";
+
+app.locals.mainFlashcards = [
+	{
+		"front": "to show",
+		"back": "mostrar" 
+	},
+	{
+		"front": "to win",
+		"back": "ganar" 
+	},
+	{
+		"front": "to delete",
+		"back": "borrar" 
+	}
+];
+
 const staticDirectory = path.join(__dirname, './public');
 app.use(express.static(staticDirectory));
 

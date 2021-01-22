@@ -1,0 +1,24 @@
+<div>
+	Number of flashcards: <span class="totalNumber">
+		<%=data.items.length %>
+	</span>
+</div>
+<hr />
+<div>
+	You have visited this page <b>
+		<%=visitCount%>
+	</b> times.
+</div>
+<hr />
+<div>
+	<%=data.ids.join(',') %>
+</div>
+<div>
+	<%=data.capitalizedCategories.join(',') %>
+</div>
+<hr />
+
+<div>
+	Random flashcard: <%=data.randomItem.id%> (<%=data.randomItem.category%>)
+</div>
+<hr />

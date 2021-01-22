@@ -1,1 +1,12 @@
 <p>This is the main page.</p>
+<hr />
+Page rendered at: <%=timeOfPageLoad%>
+<hr />
+Version: <%=appVersion%>
+<hr />
+<div class="flashcardSection">
+<% mainFlashcards.forEach( flashcard => { %>
+	<div><span class="front"><%=flashcard.front%></span> <span class="back">(<%=flashcard.back%>)</span></div>
+<% }) %>
+</div>
+<hr />
