@@ -31,3 +31,5 @@ body {
     font-weight: bold; }
   body .flashcardSection .back {
     color: brown; }
+  body .pageComments ul {
+    margin: 10px 0 10px -20px; }

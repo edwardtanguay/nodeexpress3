@@ -1,1 +1,10 @@
-this are the comments
+<div class="pageComments">
+<div class="formArea">
+	the form
+</div>
+<ul>
+	<% data.items.forEach(item=> {%>
+		<li class="comment"><%=item.author%>: <%=item.body%></li>
+	<% });%>
+</ul>
+</div>
