@@ -33,3 +33,11 @@ body {
     color: brown; }
   body .pageComments ul {
     margin: 10px 0 10px -20px; }
+  body .pageComments form {
+    background-color: #eee;
+    padding: 20px;
+    width: 500px;
+    border: 1px solid #ddd;
+    border-radius: 5px; }
+  body .btn-normal {
+    background-color: #ccc; }
