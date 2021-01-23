@@ -56,8 +56,8 @@ body {
     }
     form {
       background-color: #eee;
-	  padding: 20px;
-	  
+      padding: 20px;
+
       width: 500px;
       border: 1px solid #ddd;
       border-radius: 5px;
@@ -65,5 +65,12 @@ body {
   }
   .btn-normal {
     background-color: #ccc;
+  }
+  .pageHome {
+    #commentArea {
+      ul {
+        margin-top: 10px;
+      }
+    }
   }
 }

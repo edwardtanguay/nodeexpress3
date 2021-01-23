@@ -1,3 +1,4 @@
+<div class="pageHome">
 <p>This is the main page.</p>
 <hr />
 Page rendered at: <%=timeOfPageLoad%>
@@ -13,5 +14,24 @@ Version: <%=appVersion%>
 <img src="/images/codeSquare.png" alt="code square"/>
 
 <hr/>
-<button class="btn btn-primary btn-sm">Test Button</button>
+<button class="btn btn-normal btn-sm" onclick="loadComments()">Load comments</button>
+<div id="commentArea"></div>
 <hr/>
+</div>
+
+<script>
+function loadComments() {
+	fetch('http://localhost:3001/api/comments')
+	.then(res => res.json())
+	.then(comments => {
+		const divCommentArea = document.getElementById('commentArea');
+		const ul = document.createElement('ul');
+		comments.forEach(comment => {
+			const li = document.createElement('li');
+			li.appendChild(document.createTextNode(`${comment.author}: ${comment.body}`));
+			ul.appendChild(li);
+		});
+		divCommentArea.appendChild(ul);	
+	});
+}
+</script>

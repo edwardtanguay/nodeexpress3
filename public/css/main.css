@@ -41,3 +41,5 @@ body {
     border-radius: 5px; }
   body .btn-normal {
     background-color: #ccc; }
+  body .pageHome #commentArea ul {
+    margin-top: 10px; }
