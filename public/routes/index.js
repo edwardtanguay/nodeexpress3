@@ -1,5 +1,5 @@
 const express = require('express');
-const { check, validationResult } = require('express-validator');
+const { check } = require('express-validator');
 const flashcardsRoute = require('./flashcards');
 const ItemTypeComments = require('../itemTypes/itemTypeComments.js');
 
@@ -63,6 +63,14 @@ module.exports = config => {
 		}
 		return res.redirect('/comments');
 	});
+
+	router.get('/api/comments', (req, res) => {
+		const itemTypeComments = new ItemTypeComments();
+		itemTypeComments.getData(['items'])
+			.then(data => {
+				return res.json(data.items);
+			});
+	})
 
 	router.use('/flashcards', flashcardsRoute(config));
 	return router;
