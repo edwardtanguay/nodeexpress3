@@ -10,6 +10,9 @@ module.exports = config => {
 	router.get('/info', (req, res) => {
 		res.render('layout/main', { pageTitle: config.appTitle, htmlText: 'this is <b>bold</b> text', pageIdCode: "info" });
 	});
+	router.get('/comments', (req, res) => {
+		res.render('layout/main', { pageTitle: config.appTitle, pageIdCode: "comments" });
+	});
 
 	router.use('/flashcards', flashcardsRoute(config));
 	return router;
