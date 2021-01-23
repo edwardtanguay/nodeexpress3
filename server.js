@@ -3,6 +3,7 @@ const path = require('path');
 const cookieSession = require('cookie-session');
 const routes = require('./public/routes');
 const httpErrors = require('http-errors');
+const bodyParser = require('body-parser');
 
 const config = {
 	'appTitle': 'Node.js/Express Manual Site'
@@ -19,7 +20,9 @@ app.use(
 		"name": "main2",
 		"keys": ["wieijsdsdkjsdf", "nxcvkxjvxiuxivuxociv"]
 	})
-)
+);
+
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, './public/views'));

@@ -1,0 +1,12 @@
+
+	<!--
+	<% if(errors) {%>
+		<div class="alert alert-danger">
+			<ul>
+			<% errors.forEach(error => {%>
+nnn
+			<%})%>
+			</ul>	
+		</div>
+	<%}%>
+	-->
